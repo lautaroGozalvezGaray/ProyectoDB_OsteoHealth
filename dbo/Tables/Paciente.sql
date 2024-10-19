@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[Paciente] (
+    [Dni]                     INT            NOT NULL,
+    [Nombre]                  VARCHAR (50)   NULL,
+    [Apellido]                VARCHAR (50)   NULL,
+    [FechaIngreso]            DATE           NULL,
+    [FechaNacimiento]         DATE           NULL,
+    [Edad]                    INT            NULL,
+    [Estado]                  VARCHAR (20)   NULL,
+    [Peso]                    DECIMAL (5, 2) NULL,
+    [Altura]                  DECIMAL (5, 2) NULL,
+    [Sexo]                    INT            NULL,
+    [Telefono]                VARCHAR (20)   NULL,
+    [Email]                   VARCHAR (50)   NULL,
+    [idObraSocial]            INT            NULL,
+    [idImagen]                INT            NULL,
+    [idUbicacion]             INT            NULL,
+    [idInformacionAdicional]  INT            NULL,
+    [idEnfermedadHereditaria] INT            NULL,
+    [idAntecedeToco]          INT            NULL,
+    PRIMARY KEY CLUSTERED ([Dni] ASC),
+    FOREIGN KEY ([idImagen]) REFERENCES [dbo].[ImagenPaciente] ([idImagen]),
+    FOREIGN KEY ([idInformacionAdicional]) REFERENCES [dbo].[InformacionAdicional] ([idInformacionAdicional]),
+    FOREIGN KEY ([idObraSocial]) REFERENCES [dbo].[ObraSocial] ([idObraSocial]),
+    FOREIGN KEY ([idUbicacion]) REFERENCES [dbo].[Ubicacion] ([idUbicacion]),
+    FOREIGN KEY ([Sexo]) REFERENCES [dbo].[Sexo] ([idSexo])
+);
+

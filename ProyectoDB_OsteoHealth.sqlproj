@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ProyectoDB_OsteoHealth</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{591b4fa0-81b0-439f-9f70-e55a32564de7}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>ProyectoDB_OsteoHealth</RootNamespace>
+    <AssemblyName>ProyectoDB_OsteoHealth</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Ubicacion.sql" />
+    <Build Include="dbo\Tables\TroncoFlexion.sql" />
+    <Build Include="dbo\Tables\Tratamientos.sql" />
+    <Build Include="dbo\Tables\TratamientoEfectuado.sql" />
+    <Build Include="dbo\Tables\TiposEstructura.sql" />
+    <Build Include="dbo\Tables\TipoHabitoToxico.sql" />
+    <Build Include="dbo\Tables\TipoEstudios.sql" />
+    <Build Include="dbo\Tables\TipoEnfermedadHereditaria.sql" />
+    <Build Include="dbo\Tables\TipoEnfermedad.sql" />
+    <Build Include="dbo\Tables\TipoActividadLaboral.sql" />
+    <Build Include="dbo\Tables\TipoActividadFisica.sql" />
+    <Build Include="dbo\Tables\Sueno.sql" />
+    <Build Include="dbo\Tables\Sintomatologia.sql" />
+    <Build Include="dbo\Tables\SintomaDigestion.sql" />
+    <Build Include="dbo\Tables\SindromeDetectado.sql" />
+    <Build Include="dbo\Tables\Sexo.sql" />
+    <Build Include="dbo\Tables\Sesion.sql" />
+    <Build Include="dbo\Tables\Sentadilla.sql" />
+    <Build Include="dbo\Tables\PasoObstaculo.sql" />
+    <Build Include="dbo\Tables\Parentezco.sql" />
+    <Build Include="dbo\Tables\Paciente.sql" />
+    <Build Include="dbo\Tables\ObraSocial.sql" />
+    <Build Include="dbo\Tables\MovilidadHombros.sql" />
+    <Build Include="dbo\Tables\MetodoAnticonceptivo.sql" />
+    <Build Include="dbo\Tables\LevantamientoPierna.sql" />
+    <Build Include="dbo\Tables\InformeMedico.sql" />
+    <Build Include="dbo\Tables\InformacionAdicional.sql" />
+    <Build Include="dbo\Tables\ImagenPaciente.sql" />
+    <Build Include="dbo\Tables\HabitosToxicos.sql" />
+    <Build Include="dbo\Tables\FrecuenciaLapso.sql" />
+    <Build Include="dbo\Tables\FormaIngesta.sql" />
+    <Build Include="dbo\Tables\EvaluacionBiomecanica.sql" />
+    <Build Include="dbo\Tables\EstudiosNosocologicos.sql" />
+    <Build Include="dbo\Tables\Estudios.sql" />
+    <Build Include="dbo\Tables\EstiloActividadLaboral.sql" />
+    <Build Include="dbo\Tables\EstadoDigestion.sql" />
+    <Build Include="dbo\Tables\EstabilidadRotacion.sql" />
+    <Build Include="dbo\Tables\EscuchaOsteopatica.sql" />
+    <Build Include="dbo\Tables\Digestion.sql" />
+    <Build Include="dbo\Tables\DesplanteLinea.sql" />
+    <Build Include="dbo\Tables\ComidaPredominante.sql" />
+    <Build Include="dbo\Tables\ClaseComidaPredominante.sql" />
+    <Build Include="dbo\Tables\Caracteristicas.sql" />
+    <Build Include="dbo\Tables\CalidadPercibidaSueno.sql" />
+    <Build Include="dbo\Tables\AntecedentesTocoginecologicos.sql" />
+    <Build Include="dbo\Tables\Alimentacion.sql" />
+    <Build Include="dbo\Tables\ActividadLaboralProfesional.sql" />
+    <Build Include="dbo\Tables\ActividadFisica.sql" />
+  </ItemGroup>
+</Project>
