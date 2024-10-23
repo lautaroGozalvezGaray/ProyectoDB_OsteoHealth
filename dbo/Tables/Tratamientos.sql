@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Tratamientos] (
-    [idTratamiento]        INT           NOT NULL,
-    [idAntecedeNosologico] INT           NULL,
+    [idTratamiento]        INT           IDENTITY (1, 1) NOT NULL,
+    [idAntecedeNosologico] INT           NOT NULL,
     [Tratamiento]          VARCHAR (255) NULL,
     [Resultado]            VARCHAR (255) NULL,
     PRIMARY KEY CLUSTERED ([idTratamiento] ASC),

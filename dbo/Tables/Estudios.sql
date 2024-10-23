@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Estudios] (
-    [idEstudios]           INT           NOT NULL,
-    [idAntecedeNosologico] INT           NULL,
+    [idEstudios]           INT           IDENTITY (1, 1) NOT NULL,
+    [idAntecedeNosologico] INT           NOT NULL,
     [RutaArchivo]          VARCHAR (255) NULL,
     [Fecha]                DATE          NULL,
     PRIMARY KEY CLUSTERED ([idEstudios] ASC),

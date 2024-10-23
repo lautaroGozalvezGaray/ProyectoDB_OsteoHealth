@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[TratamientoEfectuado] (
-    [idTratamientoEfectuado] INT           NOT NULL,
-    [idSesion]               INT           NULL,
-    [idTiposEstructura]      INT           NULL,
+    [idTratamientoEfectuado] INT           IDENTITY (1, 1) NOT NULL,
+    [idSesion]               INT           NOT NULL,
+    [idTiposEstructura]      INT           NOT NULL,
     [TecnicaUtilizada]       VARCHAR (255) NULL,
     [RespuestaATecnica]      VARCHAR (255) NULL,
     PRIMARY KEY CLUSTERED ([idTratamientoEfectuado] ASC),

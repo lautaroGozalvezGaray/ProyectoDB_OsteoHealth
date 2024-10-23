@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[ActividadFisica] (
-    [idActividadFisica]      INT            NOT NULL,
-    [idSesion]               INT            NULL,
+    [idActividadFisica]      INT            IDENTITY (1, 1) NOT NULL,
+    [idSesion]               INT            NOT NULL,
     [TiempoDedicadoXSession] DECIMAL (5, 2) NULL,
     [TiempoVigencia]         VARCHAR (50)   NULL,
     [CantidadLapso]          INT            NULL,

@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[DesplanteLinea] (
-    [idDesplanteLinea]        INT            NOT NULL,
-    [idEvaluacionBiomecanica] INT            NULL,
+    [idDesplanteLinea]        INT            IDENTITY (1, 1) NOT NULL,
+    [idEvaluacionBiomecanica] INT            NOT NULL,
     [Nombre]                  VARCHAR (50)   NULL,
     [Derecho]                 DECIMAL (5, 2) NULL,
     [Izquierdo]               DECIMAL (5, 2) NULL,

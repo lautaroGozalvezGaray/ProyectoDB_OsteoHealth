@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[PasoObstaculo] (
-    [idPasoObstaculo]         INT            NOT NULL,
-    [idEvaluacionBiomecanica] INT            NULL,
+    [idPasoObstaculo]         INT            IDENTITY (1, 1) NOT NULL,
+    [idEvaluacionBiomecanica] INT            NOT NULL,
     [Nombre]                  VARCHAR (50)   NULL,
     [DesempenoDerecho]        DECIMAL (5, 2) NULL,
     [DesempenoIzquierdo]      DECIMAL (5, 2) NULL,
