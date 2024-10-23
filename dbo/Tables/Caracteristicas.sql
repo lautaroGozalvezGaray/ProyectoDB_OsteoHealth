@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Caracteristicas] (
-    [idCaracteristicas]      INT            NOT NULL,
+    [idCaracteristicas]      INT            IDENTITY (1, 1) NOT NULL,
     [Edad]                   INT            NULL,
     [Peso]                   DECIMAL (5, 2) NULL,
     [Altura]                 DECIMAL (5, 2) NULL,

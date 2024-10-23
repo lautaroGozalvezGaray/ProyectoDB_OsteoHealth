@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[TroncoFlexion] (
-    [idTroncoFlexion]         INT            NOT NULL,
-    [idEvaluacionBiomecanica] INT            NULL,
+    [idTroncoFlexion]         INT            IDENTITY (1, 1) NOT NULL,
+    [idEvaluacionBiomecanica] INT            NOT NULL,
     [Nombre]                  VARCHAR (50)   NULL,
     [Puntuacion]              DECIMAL (5, 2) NULL,
     [Desempeno]               DECIMAL (5, 2) NULL,

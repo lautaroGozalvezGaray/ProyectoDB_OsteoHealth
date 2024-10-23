@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[MovilidadHombros] (
-    [idMovilidadHombros]      INT            NOT NULL,
-    [idEvaluacionBiomecanica] INT            NULL,
+    [idMovilidadHombros]      INT            IDENTITY (1, 1) NOT NULL,
+    [idEvaluacionBiomecanica] INT            NOT NULL,
     [Nombre]                  VARCHAR (50)   NULL,
     [Derecho]                 DECIMAL (5, 2) NULL,
     [Izquierdo]               DECIMAL (5, 2) NULL,
