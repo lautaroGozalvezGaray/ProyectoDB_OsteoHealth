@@ -108,5 +108,8 @@
     <Build Include="dbo\Tables\Alimentacion.sql" />
     <Build Include="dbo\Tables\ActividadLaboralProfesional.sql" />
     <Build Include="dbo\Tables\ActividadFisica.sql" />
+    <Build Include="dbo\Tables\Usuarios.sql" />
+    <Build Include="dbo\Tables\Turnos.sql" />
+    <Build Include="dbo\Tables\TipoTratamiento.sql" />
   </ItemGroup>
 </Project>
